@@ -1,2 +1,2 @@
 # SITE-ADS-New
-Site da Faculdade de ADS
+Site que está em desenvolvimento em HTML, CSS, PHP, POSTGRES e um pouco da JavaScript.
