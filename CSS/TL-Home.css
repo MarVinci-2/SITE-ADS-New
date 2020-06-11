@@ -21,7 +21,7 @@ body
 
 /*FORMATAÇÃO DA BARRA PRINCIPAL*/
 
-.barra-primaria
+.header-bd
 {
     width: 100%;
     height: 80px;
@@ -289,26 +289,22 @@ slider
 {
     display: block;
     width: 100%;
-    height: 800px;
-    top: 16.5%;
+    height: 100%;
+    top: 39.95%;
     overflow: hidden;
-    position: relative;
-    left: 0%;
-    
-    
-   
+    position: absolute;
+    left: 0;
 }
 
 slider > * {
     position: absolute;
     display: block;
     width: 100%;
-    height:  80%;
+    height: 600px;
     background: #1f1f1f;
     animation: slide 12s infinite;
     overflow: hidden;
     border-bottom: 3px solid #c6c6c6;
-    
 }
 
 slide:nth-child(1)
@@ -347,21 +343,20 @@ slide:nth-child(4)
 
 @keyframes slide
 {
-   0% { left: 100%; width: 100%;}
-   5% { left: 0%;}
-   25% { left: 0%;}
-   30% { left: -100%; width: 100%;}
-   30.0001% {left: -100%; width: 0%;}
-   100% { left: 100%; width: 0%;}
+    0% { left: 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%;}
+    30.0001% {left: -100%; width: 0%;}
+    100% { left: 100%; width: 0%;}
 }
 
 
-
-
-#titulo{
+#titulo
+{
     background-color: rgb(58, 140, 223);
     color: white;
-    margin-top:-11.9%;
+    margin-top:58%;
     height: 334px;
     font-size: 12px;
     padding-left: 100px;
@@ -374,23 +369,25 @@ slide:nth-child(4)
     font-size: 18px;
     background-color:rgba(60, 124, 196, 0.856);
     width: 400px;
-    margin-top:1.1%;
+    margin-top:-5.4%;
     transform:skew(-6deg, 0deg) rotateX(-10deg) translate(15px, 10px);
     margin-left:3%;
     position: relative;
-    top:-29%;    
+    top:-14%;    
 }
+
 h2 {
-color:white;
-margin-top: -8%;
-margin-left: 6%;
+    color:white;
+    margin-top: 2%;
+    margin-left: 6%;
 
 }
-p{
-margin-left: 7%;
-font-size: 18px;
-}
 
+p
+{
+    margin-left: 7%;
+    font-size: 18px;
+}
 
 
 hr
@@ -407,52 +404,8 @@ hr
     transform:skew(-6deg, 0deg) rotateX(-10deg) translate(15px, 10px);
     margin-left:-4%;
     position:relative;
-    top:-410px;
+    top:-370px;
     left: 550px;
     width: 480px;
     height: 335px;
 }
-
-
-
-
-
-
-@media(max-width: 991px)
-{
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
