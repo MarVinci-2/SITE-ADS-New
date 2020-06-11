@@ -2,181 +2,273 @@ body
 {       
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;  
+    background-color: var(--bgColor);  
 }
      
 /*FORMATAÇÃO DA BARRA PRINCIPAL*/
-/*
-    .barra-primaria 
-    {
-        width: 100%;
-        height: 80px;
-        background-color: #1a1a1a; 
-        position: absolute;
-        top: 0px; 
-        border-bottom: 1px solid #c6c6c6;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .barra-primaria ol
-    {
-        position: relative;
-        list-style: none;
-        width: 400px;
-    }
+:root
+{
 
-    .barra-primaria ol li 
-    {
-        float: left;
-        width: 110px;
-        box-sizing: border-box;
-        margin-left:5px ;
-        padding: 30px;
+    --bgColor: #1a1a1a;             /*Cor do Background*/
+    --barra-pri: #1a1a1a;           /*Cor da barra primaria*/
+    --carroselColor:#1a1a1a;        /*Cor do Carrosel */
+    --menuSocial: #1E90FF;          /* Cor do menu social */
+    --searchIcon: #0984e3;          /*Cor do Search Icon */
+    --logoCursoColor: #1E90FF;
 
-    }
+}
 
-    .barra-primaria #opt a 
-    {
-        color: #0984e3;
-        text-align: center;
-        text-transform:uppercase;  
-        display: block;
-    }
 
-    .barra-primaria #opt a:hover 
-    {
-        color: white;
-        transition: 1s;
-        cursor: pointer;
-    }
+/*FORMATAÇÃO DA BARRA PRINCIPAL*/
+
+.header-bd
+{
+    width: 100%;
+    height: 80px;
+    background-color: var(--barra-pri);     
+    position: relative;
+    top: 0px; 
+    border-bottom: 1px solid #c6c6c6;
     
-    #fds-community 
-    {
-        position: absolute;
-        height: 60px;
-        width: 200px;
-        top:10px;
-        left: 2%;
-    }
+}
 
+.navbar ul
+{
+    position: relative;
+    list-style: none;
+    margin-left: 450px;
+    display: inline-block;
+    width: 350px;
+    margin-top: -4px;
+    
+    
+    
+    
+}
+
+.navbar ul li 
+{
+    float: left;
+    width: 110px;
+    box-sizing: border-box;
+    margin-left:5px ;
+    padding: 30px;
+    
+    
+
+}
+
+.navbar #opt a 
+{
+    color: #f2f2f2;
+    text-align: center;
+    text-transform:uppercase;  
+    display: block;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.navbar #opt a:hover 
+{
+    color: #0984e3;
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+/* FIM DO CSS DOS NOMES DA BARRA PRINCIPAL */
+
+/* CSS DA LOGO DA FADESA COMMUNITY DA BARRA PRINCIPAL (IMAGEM PEQUENA) */
+#fds-community 
+{
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    top:10px;
+    left: 2%;
+}
+
+
+
+/* CSS DAS REDES SOCIAS DA BARRA PRINCIPAL */
+
+.socialmenu ul  
+{
+    position: absolute;
+    top:45%;
+    left:89%;
+    padding:0;
+    margin:0;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.socialmenu ul li
+{
+    list-style: none;
+    margin: 0 4px;
+}
+
+.socialmenu ul li .fa
+{
+    font-size: 25px;
+    line-height: 39px;
+    transition: .6s;
+    color: white; 
+}
+
+.socialmenu ul li .fa:hover
+{
+    color: #fff;
+}
+
+.socialmenu ul li a 
+{
+    position: relative;
+    display: block;
+    width:38px;
+    height:38px;
+    background-color: var(--menuSocial);
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+ 
+.socialmenu ul li a:hover
+{
+    transform: translate(0, -10px);
+}
+
+.socialmenu ul li:nth-child(1) a:hover
+{
+    background-color: #3b5999;
+}
+.socialmenu ul li:nth-child(2) a:hover
+{
+    background-color: #e4405f;
+}
+.socialmenu ul li:nth-child(3) a:hover
+{
+    background-color: #25D366;
+}
+/* FIM DO CSS DOS MENUS DA BARRA PRINCIPAL */
+
+/* CSS DA LUPA DE PESQUISA */
+.search-icon 
+{   
+    position: absolute;
+    left: 77%;
+    top: 35px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    
+}
+
+.search-icon .fa
+{
+    width: 40px;
+    height: 40px;
+    background-color: var(--searchIcon);
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-overlay
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.8;
+    visibility: hidden;
+    transition: all .3s ease-in; 
+    
+}
+
+.search-overlay.active
+{
+    visibility: visible;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.search-popup
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: 600px;
+    /* z-index: 21; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+    
+    
+}
+
+.search-popup.active
+{
+    visibility: visible;
+    opacity: 1;
+    z-index: 11;
    
-
-    .socialmenu ul  
-    {
-        position: absolute;
-        top:45%;
-        left:89%;
-        padding:0;
-        margin:0;
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-
-    .socialmenu ul li
-    {
-        list-style: none;
-        margin: 0 4px;
-    }
-
-    .socialmenu ul li .fa
-    {
-        font-size: 25px;
-        line-height: 39px;
-        transition: .6s;
-        color: white; 
-    }
-
-    .socialmenu ul li .fa:hover
-    {
-        color: #fff;
-    }
-
-    .socialmenu ul li a 
-    {
-        position: relative;
-        display: block;
-        width:38px;
-        height:38px;
-        background-color: #1E90FF;
-        text-align: center;
-        transition: .6s;
-        box-shadow: 0 5px 4px rgba(0,0,0,.5);
-    }
     
-    .socialmenu ul li a:hover
-    {
-        transform: translate(0, -10px);
-    }
+}
 
-    .socialmenu ul li:nth-child(1) a:hover
-    {
-        background-color: #3b5999;
-    }
-    .socialmenu ul li:nth-child(2) a:hover
-    {
-        background-color: #e4405f;
-    }
-    .socialmenu ul li:nth-child(3) a:hover
-    {
-        background-color: #25D366;
-    }
-    
+.search-popup .form-group
+{
+    position: relative;
+}
 
+.search-popup .form-control
+{
+    width: 78%;
+    height: 60px;
+    border: none;
+    padding: 0px 100px 0px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    color: #ffffff;
     
-    .busca 
-    {
-        position: absolute;
-        top: 39%;
-        left: 64%;
-        height: 50px;
-        width:250px;
-    }
     
-    .busca input[type="search"]
-    {
-        height: 30px;
-        border: none;
-        outline: none;
-        padding-left: 50px;
-        width: 0px;
-        position: absolute;
-        top: -8px;
-        left: 0px;
-        z-index: 3;
-        background: none;
-        transition: width 1s ease-in-out;
-        cursor: pointer;
-    }
-    
-    .busca input[type="search"]:focus 
-    { 
-        border: 1px solid #ccc;
-        border-radius: 25px;
-        width: 100%;
-        z-index: 1;
-        transition: width 1s ease-in;
-        background-color: white;
-    }
-    
-    .fas
-    {
-        position: absolute;
-        top:0;
-        left: 0;
-    }
-    
-    .fa-search
-    {
-        color: #ffffff;
-        font-size: 20px;   
-        z-index: 2;       
-    } 
-*/
+}
 
-.form-body
+.search-popup .submit-btn
+{
+    background-color: #0984e3;
+    width: 70px;
+    height: 60px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 30px 30px 0px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.search-popup .form-control:focus
+{
+    outline: none;
+}
+
+.search-popup .submit-btn:focus
+{
+    outline: none;
+}
+
+
+
+.foram-body
 {
     position: absolute;
     top: 56%;
@@ -184,8 +276,8 @@ body
     transform: translate(-50%,-50%);
 
     background-color: #ecf0f1;
-    height: 450px;
-    width: 380px;
+    height: 400px;
+    width: 340px;
     padding: 30px;
     border-radius: 10px;
     display: flex;
@@ -193,27 +285,27 @@ body
    
 }
 
-.form-body h1
+.foram-body h1
 {
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 60px;
     text-align: center;
     letter-spacing: 2px;
     
 }
 
-.form-body input 
+.foram-body input 
 {
     outline-color: #0984e3;
     box-shadow: none;
     text-align: center;
     font-size: 16px;
-    width: 320px;
+    width: 330px;
     height: 40px;
     
 }
 
-.form-body input[type="submit"]
+.foram-body input[type="submit"]
 {
     width: 160px;
     background-color: #0984e3;
@@ -221,26 +313,29 @@ body
     box-shadow: none;
     text-transform: uppercase;
     border: none;
+    height: 45px;
+    color: #f2f2f2;
 }
-.form-body input[type="submit"]:hover
+.foram-body input[type="submit"]:hover
 {
     filter: brightness(90%);
     cursor: pointer;
 }
 
-.form-body .lb-input
+.foram-body .lb-input
 {
     position: relative;
-    top: -60px;
+    top: -65px;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.form-body .p-input
+.foram-body .p-input
 {
     position: relative;
-   
+    text-decoration: none;
     top: 6%;
+    
 }
 
 .img-fadesa img
@@ -254,67 +349,4 @@ body
 
 }
 
-@media (max-width: 360px)
-{
-    .form-body{
-        max-width: 400px;
-        top: 50%;
-        left: 50%;
-       transform: translate(-50%,-50%);
-       width: 300px;
-    }
-
-    .form-body input {
-        width: 250px;
-    }
-    
-    .form-body input[type="submit"] {
-        width: 250px;
-    }
-
-    .form-body .p-input
-{
-    position: relative;
-    font-size: 15px;
-    top: 6%;
-}
-
-    .form-body .img-fadesa{
-       display: none;
-    }
-}
-
-
-
-@media (max-width: 991px)
-{
-    .form-body{
-        max-width: 400px;
-        top: 50%;
-        left: 50%;
-       transform: translate(-50%,-50%);
-       width: 300px;
-    }
-
-    .form-body input {
-        width: 250px;
-    }
-    
-    .form-body input[type="submit"] {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .form-body .p-input
-{
-    position: relative;
-    font-size: 15px;
-    top: 6%;
-}
-
-    .form-body .img-fadesa{
-       display: none;
-    }
-}
 

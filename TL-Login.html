@@ -2,28 +2,75 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./Imagens/fadesaicon.gif"  type="image/x-icon" />
-    <link rel="stylesheet" href="./CSS/Crossbrowser.css">
+    <!-- Icon da barra do navegador  -->
+    <link rel="shortcut icon" href="./Imagens/fadesaicon.gif" type="image/x-icon" />
+    <!-- Link da FONTE PRINCIPAL do SITE By GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <!-- Link do Site dos icons + script dos icons para poder funcionar  corretamente-->
+    <script src="https://kit.fontawesome.com/79dfdaaf5e.js" crossorigin="anonymous"></script>
+    <!-- Link do CSS da Pagina -->
+    <link rel="stylesheet" href=".CSS/Crossbrowser.css">
     <link rel="stylesheet" href="./CSS/TL-Login.css">
+
 </head>
 <body>
-    <form class="form-body">
+    <!-- HTML da barra principal e do carrosel de curos -->
+    <header class="header-bd">
+        <!-- Imagem da barra principal Fadesa Community pequena -->
+            <img src="./Imagens/fds-community.png" id="fds-community">
+            <!-- Itens da lista da barra principal -->
+            <div class="navbar">
+                <ul class="navbar-ul">
+                    <li id="opt"><a href="#" id="opt">inicio</a></li>
+                    <li id="opt"><a href="#" id="opt">login</a></li>
+                    <li id="opt"><a href="#" id="opt">eventos</a></li>
+                </ul>
+            </div>
+            <div class="socialmenu">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+      
+            <!-- HTML da barra de Busca + a Lupa -->
+            <div class="search-icon">
+                <i class="fa fa-search search-btn fa-flip-horizontal"></i>
+            </div>
+
+            <div class="search-overlay"></div>
+            <div class="search-popup">
+                <form class="search-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Campo de pesquisa">
+                        <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div> 
+            <!-- Script da Barra de busca mais lupa -->
+            <script src="./Scripts/script.js"></script>  
+
+      <!-- Fim da barra principal -->      
+    </header>
+    <form class="foram-body">
 
         <div class="img-fadesa"> <img src="./Imagens/fds-community-fullsize.png" id="fds"></div>
-
+    
         <h1>login</h1>
         <input type="text" class="field-input">
         <label for="text" class="lb-input">Usuário</label>
-
+    
         <input type="password" class="field-input">
         <label for="password" class="lb-input">Senha</label>
-
+    
         <input type="submit" value="Login" class="field-input">
         <p class="p-input">Não tem uma conta ? <a href="#" class="p-input"> Clique aqui !</a></p>
         
     </form>
+
+        
 </body>
 </html>
