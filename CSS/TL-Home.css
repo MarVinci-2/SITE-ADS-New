@@ -14,6 +14,7 @@ body
     --carroselColor:#1a1a1a;        /*Cor do Carrosel */
     --menuSocial: #1E90FF;          /* Cor do menu social */
     --searchIcon: #0984e3;          /*Cor do Search Icon */
+    --logoCursoColor: #1E90FF;
 
 }
 
@@ -25,7 +26,7 @@ body
     width: 100%;
     height: 80px;
     background-color: var(--barra-pri);     
-    position: absolute;
+    position: relative;
     top: 0px; 
     border-bottom: 1px solid #c6c6c6;
     
@@ -283,15 +284,18 @@ body
  /* FIM DO CSS DA LUPA DE PESQUISA */
 
 /*propaganda*/
+
 slider 
 {
     display: block;
     width: 100%;
-    height: 1000px;
-    top: 24%;
+    height: 800px;
+    top: 16.5%;
     overflow: hidden;
     position: relative;
     left: 0%;
+    
+    
    
 }
 
@@ -299,10 +303,12 @@ slider > * {
     position: absolute;
     display: block;
     width: 100%;
-    height:  62%;
+    height:  80%;
     background: #1f1f1f;
     animation: slide 12s infinite;
     overflow: hidden;
+    border-bottom: 3px solid #c6c6c6;
+    
 }
 
 slide:nth-child(1)
@@ -349,64 +355,103 @@ slide:nth-child(4)
    100% { left: 100%; width: 0%;}
 }
 
+
+
+
 #titulo{
-background-color: rgb(58, 140, 223);
-color: white;
-margin-top:-7%;
-height: 450px;
-font-size: 12px;
-padding-left: 100px;
-padding-top:2px;
+    background-color: rgb(58, 140, 223);
+    color: white;
+    margin-top:-11.9%;
+    height: 334px;
+    font-size: 12px;
+    padding-left: 100px;
+    padding-top:100px;
+    border-bottom: 3px solid #c6c6c6;
 }
 
 #parágrafo{
-color: black;
-font-size: 18px;
-background-color:rgba(60, 124, 196, 0.856);
-width: 400px;
-margin-top:6%;
-border-radius: 40px 0px 40px 0px;
-margin-left:2%;
-position: relative;
-top:10%;    
+    color: black;
+    font-size: 18px;
+    background-color:rgba(60, 124, 196, 0.856);
+    width: 400px;
+    margin-top:1.1%;
+    transform:skew(-6deg, 0deg) rotateX(-10deg) translate(15px, 10px);
+    margin-left:3%;
+    position: relative;
+    top:-29%;    
 }
 h2 {
 color:white;
-margin-top: 2%;
-margin-left: 4%;
+margin-top: -8%;
+margin-left: 6%;
 
 }
 p{
-margin-left: 4%;
-
+margin-left: 7%;
+font-size: 18px;
 }
 
-#boxenorme
+
+
+hr
 {
-background-color: #1a1a1a;
-height: 1100px;
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray
 
 }
 
-.hackerr
+#hacker
 {
-    position: absolute;
-    top: 140%;
-    width: 100%;
-    border-top: 3px solid #c6c6c6;
+    transform:skew(-6deg, 0deg) rotateX(-10deg) translate(15px, 10px);
+    margin-left:-4%;
+    position:relative;
+    top:-410px;
+    left: 550px;
+    width: 480px;
+    height: 335px;
 }
 
-.hackerr img 
+
+
+
+
+
+@media(max-width: 991px)
 {
-    width: 100%;
-    background-size:  cover;
-    height: 100%;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-
-
-
 
 
 
