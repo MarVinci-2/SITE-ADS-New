@@ -16,6 +16,7 @@ body
     --menuSocial: #1E90FF;          /* Cor do menu social */
     --searchIcon: #0984e3;          /*Cor do Search Icon */
     --logoCursoColor: #1E90FF;
+    --btnMenu: #1E90FF;
 
 }
 
@@ -37,10 +38,10 @@ body
 {
     position: relative;
     list-style: none;
-    margin-left: 450px;
+    margin-left: 495px;
     display: inline-block;
     width: 350px;
-    margin-top: -4px;
+    margin-top: -30px;
     
     
     
@@ -236,7 +237,7 @@ body
     padding: 0px 100px 0px 30px;
     font-size: 18px;
     border-radius: 30px;
-    color: #ffffff;
+    color: #000000;
     
     
 }
@@ -276,8 +277,8 @@ body
     transform: translate(-50%,-50%);
 
     background-color: #ecf0f1;
-    height: 400px;
-    width: 340px;
+    height: 420px;
+    width: 370px;
     padding: 30px;
     border-radius: 10px;
     display: flex;
@@ -292,6 +293,7 @@ body
     text-align: center;
     letter-spacing: 2px;
     
+    
 }
 
 .foram-body input 
@@ -300,8 +302,8 @@ body
     box-shadow: none;
     text-align: center;
     font-size: 16px;
-    width: 330px;
-    height: 40px;
+    width: 310px;
+    height: 45px;
     
 }
 
@@ -342,11 +344,177 @@ body
 {
     position: absolute;
     top:-2%;
-    left: -150%;
+    left: -145%;
     width: 300px;
     height: 370px;
 
 
 }
+
+#lbl-input-chk
+{
+    background-color: var(--btnMenu);
+    color: #f2f2f2;
+
+    height: 50px;
+    width: 50px;
+
+    padding: 10px;
+    font-size: 20px;
+
+    position: relative;
+    left: 1rem;
+    top: 1.5rem;
+    visibility: hidden;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+
+
+@media screen and (max-width: 366px)
+{
+    .img-fadesa img{
+        display: none;
+    }
+
+    .foram-body
+    {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .foram-body input 
+    {
+        width: 16.5rem;
+
+    }
+
+    .foram-body .p-input
+    {
+        font-size: 15px;
+    }
+
+    
+    .navbar ul 
+    {
+     
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        background-color: var(--bgColor);
+
+        top:5.5rem;
+        left: -30rem;
+        width: 250px;
+        height: 600px;
+
+        visibility: hidden;
+       
+    }
+
+
+    .socialmenu ul 
+    {
+        position: absolute;
+        z-index: 1;
+        left: 8rem;
+        top: 30rem;
+        visibility: hidden;
+        display: none;
+        
+    }
+
+    
+
+    #fds-community 
+    {
+        position: absolute;
+        height: 65px;
+        width: 200px;
+        top:10px;
+        left: 5rem;
+    }
+
+    #lbl-input-chk
+    {
+        background-color: var(--btnMenu);
+        color: #f2f2f2;
+
+        height: 50px;
+        width: 50px;
+
+        padding: 8px;
+        font-size: 20px;
+
+        position: relative;
+        left: 1.2rem;
+        top: 1.5rem;
+        visibility: visible;
+    }
+
+    input[type="checkbox"]
+    {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked~.navbar ul
+    {
+        visibility: visible;
+        transition: all .4s ease;
+    }
+
+    /* input[type="checkbox"]:checked~.socialmenu ul 
+    {
+        visibility: visible;
+        transition: all 0s;
+    } */
+
+
+    .search-icon 
+    {   
+        position: absolute;
+        left: 90%;
+        top: 2.5rem;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+
+    .search-popup .submit-btn
+    {
+        left: 25rem;
+    }
+
+    .search-popup
+    {   
+        top: 25rem;
+        left: 20.5rem;
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
