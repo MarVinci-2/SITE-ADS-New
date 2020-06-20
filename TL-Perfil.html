@@ -33,10 +33,23 @@
                 </ul>
             </div>
             <!-- HTML da barra de Busca + a Lupa -->
-            <div class="busca">
-                <input type="search">
-                <i class="fas fa-search"></i>
-            </div>      
+            <div class="search-icon">
+                <i class="fa fa-search search-btn fa-flip-horizontal"></i>
+            </div>
+
+            <div class="search-overlay"></div>
+            <div class="search-popup">
+                <form class="search-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Campo de pesquisa">
+                        <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div> 
+            <!-- Script da Barra de busca mais lupa -->
+            <script src="./Scripts/script.js"></script>  
+
+        <!-- Fim da barra principal -->       
     </header>
     <!-- Fim da barra principal -->
     <!-- HTML DA CAIXA/QUADRO DO PERFIL  -->

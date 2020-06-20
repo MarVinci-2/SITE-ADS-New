@@ -4,7 +4,11 @@ body
     font-family: 'Roboto', sans-serif;
     background-color: #1a1a1a;  
 }
-     
+ 
+:root
+{
+    --searchIcon: #0984e3;
+}
 /*FORMATAÇÃO DA BARRA PRINCIPAL*/
 .barra-primaria
 {
@@ -126,55 +130,119 @@ body
 }
 /* FIM DO CSS DOS MENUS DA BARRA PRINCIPAL */
 
-/* CSS da DIV BUSCA e Do ESTILO  DA LUPA */
-.busca 
-{
+/* CSS DA LUPA DE PESQUISA */
+.search-icon 
+{   
     position: absolute;
-    top: 39%;
-    left: 64%;
-    height: 50px;
-    width:250px;
+    left: 77%;
+    top: 35px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    
 }
-/* CSS DO CAMPO DE BUSCA */
- .busca input[type="search"]
+
+.search-icon .fa
 {
-    height: 30px;
-    border: none;
-    outline: none;
-    padding-left: 50px;
-    width: 0px;
-    position: absolute;
-    top: -8px;
-    left: 0px;
-    z-index: 3;
-    background: none;
-    transition: width 1s ease-in-out;
+    width: 40px;
+    height: 40px;
+    background-color: var(--searchIcon);
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
     cursor: pointer;
 }
-/* CSS QUANDO CLICA NO ICON DA LUPA E ATIVA A BUSCA */
-.busca input[type="search"]:focus 
-{ 
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    width: 100%;
-    z-index: 1;
-    transition: width 1s ease-in;
-    background-color: white;
+
+.search-overlay
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.8;
+    visibility: hidden;
+    transition: all .3s ease-in; 
+    
 }
- /* CSS DO ICON DA LUPA */
-.fas
+
+.search-overlay.active
+{
+    visibility: visible;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.search-popup
 {
     position: absolute;
-    top:0;
-    left: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: 600px;
+    /* z-index: 21; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+    
+    
 }
-/* ICON DA LUPA */
-.fa-search
+
+.search-popup.active
 {
-    color: #ffffff;
-    font-size: 20px;   
-    z-index: 2;       
+    visibility: visible;
+    opacity: 1;
+    z-index: 11;
+   
+    
 }
+
+.search-popup .form-group
+{
+    position: relative;
+}
+
+.search-popup .form-control
+{
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding: 0px 100px 0px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    color: #ffffff;
+    
+    
+}
+
+.search-popup .submit-btn
+{
+    background-color: #0984e3;
+    width: 70px;
+    height: 60px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 30px 30px 0px;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+.search-popup .form-control:focus
+{
+    outline: none;
+}
+
+.search-popup .submit-btn:focus
+{
+    outline: none;
+}
+
+ /* FIM DO CSS DA LUPA DE PESQUISA */
 
 .container
 {
@@ -193,6 +261,7 @@ body
     height: 160px;
     width: 100%;
     border-radius: 5px 5px 0 0;
+    
 }
 /* CSS DA FOTO DO PERFIL OU A BORDA DELA */
 .profile
